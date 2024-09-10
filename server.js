@@ -1,8 +1,11 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 const app = express();
 const PORT = 3000;
+
+app.use(cors());
 
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
